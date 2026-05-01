@@ -31,10 +31,15 @@ jobs:
       - name: Build
         run: dotnet build PriceWatcher/PriceWatcher.csproj --no-restore --configuration Release
 
+      - name: Show build output
+        run: find PriceWatcher/bin -type f | sort
+
       - name: Package
         run: |
-          cd PriceWatcher/bin/x64/Release
-          zip -r ../../../../PriceWatcher.zip .
+          PLUGIN_DIR=$(find PriceWatcher/bin -name "PriceWatcher.dll" | head -1 | xargs dirname)
+          echo "Packaging from: $PLUGIN_DIR"
+          cd "$PLUGIN_DIR"
+          zip -r "$GITHUB_WORKSPACE/PriceWatcher.zip" .
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
