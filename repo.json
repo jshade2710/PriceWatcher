@@ -7,7 +7,13 @@
     "Punchline": "Market board price alerts via Universalis.",
     "Description": "Monitors the Universalis market board and fires in-game chat and toast alerts when items on your watchlist hit a target price. Supports per-item scoping to a world, data center, or full region.",
     "Changelog": "",
-    "Tags": ["market", "universalis", "price", "alert", "watchlist"],
+    "Tags": [
+      "market",
+      "universalis",
+      "price",
+      "alert",
+      "watchlist"
+    ],
     "CategoryTags": [],
     "IsHide": false,
     "IsTestingExclusive": false,
