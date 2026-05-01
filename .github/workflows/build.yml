@@ -36,11 +36,11 @@ jobs:
 
       - name: Package
         run: |
-          PLUGIN_DIR=$(find PriceWatcher/bin -name "PriceWatcher.dll" | head -1 | xargs dirname)
-          echo "Packaging from: $PLUGIN_DIR"
-          echo "=== Manifest ===" && cat "$PLUGIN_DIR/PriceWatcher.json" || echo "No manifest found"
-          cd "$PLUGIN_DIR"
-          zip -r "$GITHUB_WORKSPACE/PriceWatcher.zip" .
+          # The Dalamud.NET.Sdk generates a ready-to-distribute zip at {PluginName}/latest.zip
+          SDK_ZIP=$(find PriceWatcher/bin -path "*/PriceWatcher/latest.zip" | head -1)
+          echo "Using SDK-generated zip: $SDK_ZIP"
+          cp "$SDK_ZIP" "$GITHUB_WORKSPACE/PriceWatcher.zip"
+          echo "=== Zip contents ===" && unzip -l "$GITHUB_WORKSPACE/PriceWatcher.zip"
 
       - name: Sync repo.json from manifest
         run: |
