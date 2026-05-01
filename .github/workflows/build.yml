@@ -1,0 +1,42 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [master]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore PriceWatcher/PriceWatcher.csproj
+
+      - name: Build
+        run: dotnet build PriceWatcher/PriceWatcher.csproj --no-restore --configuration Release
+
+      - name: Package
+        run: |
+          cd PriceWatcher/bin/Release
+          zip -r ../../../PriceWatcher.zip .
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PriceWatcher
+          path: PriceWatcher.zip
+
+      - name: Attach zip to GitHub Release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: PriceWatcher.zip
