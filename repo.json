@@ -4,20 +4,22 @@
     "Name": "Price Watcher",
     "InternalName": "PriceWatcher",
     "AssemblyVersion": "0.0.0.1",
+    "Punchline": "Market board price alerts via Universalis.",
     "Description": "Monitors the Universalis market board and fires in-game chat and toast alerts when items on your watchlist hit a target price. Supports per-item scoping to a world, data center, or full region.",
+    "Changelog": "",
+    "Tags": ["market", "universalis", "price", "alert", "watchlist"],
+    "CategoryTags": [],
+    "IsHide": false,
+    "IsTestingExclusive": false,
     "ApplicableVersion": "any",
-    "RepoUrl": "https://github.com/jshade2710/PriceWatcher",
-    "Tags": [
-      "market",
-      "universalis",
-      "price",
-      "alert",
-      "watchlist"
-    ],
     "DalamudApiLevel": 15,
+    "DownloadCount": 0,
+    "LastUpdate": 0,
+    "IconUrl": "",
+    "ImageUrls": [],
+    "RepoUrl": "https://github.com/jshade2710/PriceWatcher",
     "DownloadLinkInstall": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
     "DownloadLinkUpdate": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
-    "DownloadLinkTesting": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
-    "DownloadCount": 0
+    "DownloadLinkTesting": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip"
   }
 ]
