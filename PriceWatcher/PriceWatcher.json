@@ -1,0 +1,14 @@
+{
+  "Author": "Joshua Shade",
+  "Name": "Price Watcher",
+  "Punchline": "Get in-game alerts when market board items hit your target price.",
+  "Description": "Monitors the Universalis market board API for items on your watchlist and alerts you via chat and toast when prices reach your thresholds. Use /pricewatcher to open the watchlist.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "market",
+    "universalis",
+    "price",
+    "alert",
+    "watchlist"
+  ]
+}
