@@ -7,8 +7,14 @@
     "Description": "Monitors the Universalis market board and fires in-game chat and toast alerts when items on your watchlist hit a target price. Supports per-item scoping to a world, data center, or full region.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/jshade2710/PriceWatcher",
-    "Tags": ["market", "universalis", "price", "alert", "watchlist"],
-    "DalamudApiLevel": 11,
+    "Tags": [
+      "market",
+      "universalis",
+      "price",
+      "alert",
+      "watchlist"
+    ],
+    "DalamudApiLevel": 15,
     "DownloadLinkInstall": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
     "DownloadLinkUpdate": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
     "DownloadLinkTesting": "https://github.com/jshade2710/PriceWatcher/releases/latest/download/PriceWatcher.zip",
